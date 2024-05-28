@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background-image: url('D:/ALL FILE-20240524T035531Z-001/ALL FILE/img/gcstudyb.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+
+.header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #EBF4FD;
+    font-family: 'Trebuchet MS', sans-serif;
+    padding: 15px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 15px; 
+}
+
+.navdiv {
+    margin-left: auto;
+}
+
+.navdiv ul {
+    display: flex;
+    list-style: none;
+    padding: 0; 
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+  }
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 1.3em;
+    text-shadow: 4px 1px 5px rgba(0, 0, 0, 0.56);
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.1);
+}
+
+li a {
+    color: white;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 15px;
+    font-family: 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin-top: 20px;
+    font-size: 36px;
+    color: #EBF4FD;
+    font-family: 'Trebuchet MS', sans-serif;
+    padding-left: 15px;
+}
+
+.paragraphGCS {
+    flex: 1;
+    text-align: left;
+    padding: 96px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    color: #ffe7e7;
+}
+
+.ebook-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.webinar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.image-container img {
+    width: 400px;
+    height: auto;
+    margin-bottom: -50px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.image-container img:hover {
+    box-shadow: 0 0 20px rgba(189, 241, 174, 1);
+    animation: breathe 3s infinite alternate;
+}
+
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.triangle-button {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid rgb(228, 255, 109);
+    position: absolute;
+    left: 20px; 
+    top: 50%;
+    cursor: pointer;
+    transition: transform 0.5s ease; 
+}
+
+.triangle-button:hover {
+    transform: translateX(-10px); 
+}

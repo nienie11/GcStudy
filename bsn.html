@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Logos</title>
+  <link rel="stylesheet" href="EbookMenu.css">
+</head>
+<body>
+  <div class="nav">
+    <div class="logo-container">
+      <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\GCLogo.png" height="auto" width="70px" alt="Logo of Gordon College"> 
+    </div>
+    <p>EBOOKS</p>
+    <ul class="navlinks">
+      <li><a href="main.html">Home</a></li>
+      <li><a href="Webinar.html">Webinar</a></li>
+      <li><a href="EbookMenu.html">Ebooks</a></li>
+    </ul>
+  </div>
+  
+  <main>
+  
+    <div class="left-logo-container">
+      <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\bsn.png" alt="Large Logo" class="large-logo">
+      <div class="rectangle-container">
+        <div class="book-slider">
+          <div class="book" id="book1">
+            <a href="#" onclick="openBook('D:/ALL FILE-20240524T035531Z-001/ALL FILE/pdf/Informal-Calculus-1634582327.pdf')">
+              <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\bio1.jpg" alt="Book 1" class="book-image">
+            </a>
+            <div class="book-description">
+              <h2>Informal Calculus with Applications to Biological and Environmental Sciences by Debbie Seacrest</h2>
+              <p>A practical introduction to calculus for environmental science applications.</p>
+            </div>
+          </div>
+          
+          <div class="book" id="book2">
+            <a href="#" onclick="openBook('D:/ALL FILE-20240524T035531Z-001/ALL FILE/pdf/Microbiology for Earth Scientists.pdf')">
+              <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\BIO2.jpg" alt="Book 2" class="book-image">
+            </a>
+            <div class="book-description">
+              <h2>Microbiology for Earth Scientists by Matthew F. Kirk</h2>
+              <p>An exploration of microbiology tailored for earth science studies.</p>
+            </div>
+          </div>
+          
+          <div class="book" id="book3">
+            <a href="#" onclick="openBook('D:/ALL FILE-20240524T035531Z-001/ALL FILE/pdf/Cell_Biology_Genetics_and_Biochemistry.pdf')">
+              <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\bio3.jpg" alt="Book 3" class="book-image">
+            </a>
+            <div class="book-description">
+              <h2>Cell Biology, Genetics, and Biochemistry for Pre-Clinical Students by David Lippman</h2>
+              <p>An introductory textbook covering cell biology, genetics, and biochemistry concepts.</p>
+            </div>
+          </div>
+          
+        </div>
+        <button class="prev" onclick="prevBook()">❮</button>
+        <button class="next" onclick="nextBook()">❯</button>
+      </div>
+    </div>
+  </main>
+  <div id="logoContainer">
+    <a href="EbookMenu.html" class="logo"><img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\CCS.png" alt="Logo 1"></a>
+    <a href="cba.html" class="logo"><img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\CBA.png" alt="Logo 2"></a>
+    <a href="bsn.html" class="logo"><img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\bsn.png" alt="Logo 3"></a>
+    <a href="CEAS.html" class="logo"><img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\CEAS.png" alt="Logo 4"></a>
+  </div>
+  <footer>
+    <!-- Footer content goes here -->
+  </footer>
+
+  <div id="pdfOverlay">
+    <div class="overlayNav">
+      <button onclick="closeBook()">X</button>
+    </div>
+    <iframe id="pdfViewer" style="width: 100%; height: 100%; border: none;"></iframe>
+  </div>
+
+  <script src="EbookMenu.js"></script>
+  <script>
+    function openBook(pdfFile) {
+      var pdfViewer = document.getElementById('pdfViewer');
+      var pdfOverlay = document.getElementById('pdfOverlay');
+      pdfViewer.src = pdfFile;
+      pdfOverlay.style.display = 'flex';
+    }
+
+    function closeBook() {
+      var pdfOverlay = document.getElementById('pdfOverlay');
+      pdfOverlay.style.display = 'none';
+    }
+  </script>
+</body>
+</html>

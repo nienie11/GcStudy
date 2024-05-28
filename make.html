@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Logos</title>
+  <link rel="stylesheet" href="EbookMenu.css">
+</head>
+<body>
+  <div class="nav">
+    <div class="logo-container">
+      <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\GCLogo.png" height="auto" width="70px" alt="Logo of Gordon College"> 
+    </div>
+    <p>WEBINAR</p>
+    <ul class="navlinks">
+      <li><a href="main.html">Home</a></li>
+      <li><a href="Webinar.html">Webinar</a></li>
+      <li><a href="EbookMenu.css">Ebooks</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Main content goes here -->
+    <div class="left-logo-container">
+      <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\CCS.png" alt="Large Logo" class="large-logo">
+      <div class="rectangle-container">
+        <div class="book-slider">
+          <div class="book" id="book1">
+            <a href="#" onclick="openBook('Computer-Networking-Principles-Bonaventure.pdf')">
+              <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\intro.jpg" alt="Book 1" class="book-image">
+            </a>
+            <div class="book-description">
+              <h2>Computer Networking: Principles, Protocols and Practice by Olivier Bonaventure
+             A comprehensive guide to computer networking principles and protocols</p>
+            </div>
+          </div>
+          
+          <div class="book" id="book2">
+            <a href="#" onclick="openBook('thinkjava2.pdf')">
+              <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\think.jpg" alt="Book 2" class="book-image">
+            </a>
+            <div class="book-description">
+              <h2>Think Java: How To Think Like a Computer Scientist - 2e by Allen Downey
+             A beginner-friendly book on Java programming for aspiring computer scientists.</p>
+            </div>
+          </div>
+          
+          <div class="book" id="book3">
+            <a href="#" onclick="openBook('graphicsbook.pdf')">
+              <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\graphic.jpg" alt="Book 3" class="book-image">
+            </a>
+            <div class="book-description">
+              <h2>Introduction to Computer Graphics by David J. Eck
+              An introductory textbook covering fundamental concepts of computer graphics.</p>
+            </div>
+          </div>
+          
+        </div>
+        <button class="prev" onclick="prevBook()">❮</button>
+        <button class="next" onclick="nextBook()">❯</button>
+      </div>
+    </div>
+  </main>
+  <div id="pdfContainer" style="display:none;">
+    <iframe id="pdfViewer" width="100%" height="600px" frameborder="0"></iframe>
+  </div>
+  <div id="logoContainer">
+    <a href="EbookMenu.html" class="logo"><img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\CCS.png" alt="Logo 1"></a>
+    <a href="cba.html" class="logo"><img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\CBA.png" alt="Logo 2"></a>
+    <a href="bsn.html" class="logo"><img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\bsn.png" alt="Logo 3"></a>
+    <a href="CEAS.html" class="logo"><img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\CEAS.png" alt="Logo 4"></a>
+  </div>
+  <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+          <h3>School Resources</h3>
+          <ul>
+            <li><a href="https://www.facebook.com/GordonCollegeOfficial">Gordon College Official Facebook</a></li>
+            <li><a href="https://gordoncollegeccs.edu.ph/gces/student/#/login">GCES - STUDENT PANEL</a></li>
+            <li><a href="https://gordoncollegeccs.edu.ph/ccs/students/lamp/#/login">GCLAMP</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Departments Socials</h3>
+          <ul>
+            <li><a href="https://www.facebook.com/GordonCollegeCcs">College Of Computer Studies</a></li>
+            <li><a href="https://www.facebook.com/GordonCollegeCBAOfficial">College of Business Administration</a></li>
+            <li><a href="https://www.facebook.com/gordoncollege.ceas">College of Education, Arts, and Sciences</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100064175317282">College Of Allied Health Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact-info">
+          <h3>Contact Us</h3>
+          <p>Email: <a href="mailto:info@school.edu">GcStudy@gordoncollege.edu.ph</a></p>
+          <p>Phone: <a href="tel:+1234567890">+639919199</a></p>
+        </div>
+      </div>
+  </footer>
+
+  <script src="EbookMenu.js"></script>
+  <script>
+    function openBook(pdfName) {
+      document.getElementById('pdfViewer').src = pdfName;
+      document.getElementById('pdfContainer').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

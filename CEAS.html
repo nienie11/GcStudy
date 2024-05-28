@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Logos</title>
+  <link rel="stylesheet" href="EbookMenu.css">
+</head>
+<body>
+  <div class="nav">
+    <div class="logo-container">
+      <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\GCLogo.png" height="auto" width="70px" alt="Logo of Gordon College"> 
+    </div>
+    <p>EBOOKS</p>
+    <ul class="navlinks">
+      <li><a href="main.html">Home</a></li>
+      <li><a href="Webinar.html">Webinar</a></li>
+      <li><a href="EbookMenu.html">Ebooks</a></li>
+    </ul>
+  </div>
+  <!-- Main content goes here -->
+  <main>
+    <div class="left-logo-container">
+      <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\CEAS.png" alt="Large Logo" class="large-logo">
+      <div class="rectangle-container">
+        <div class="book-slider">
+          <div class="book" id="book1">
+            <a href="#" onclick="openBook('D:/ALL FILE-20240524T035531Z-001/ALL FILE/pdf/Discrete-Structures-1-Module-3.pdf')">
+              <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\discrete.jpg" alt="Book 1" class="book-image">
+            </a>
+            <div class="book-description">
+              <h2>Discrete Mathematics: An Open Introduction - 3rd Edition by Oscar Levin</h2>
+              <p>A comprehensive textbook covering discrete mathematics concepts.</p>
+            </div>
+          </div>
+          
+          <div class="book" id="book2">
+            <a href="#" onclick="openBook('D:/ALL FILE-20240524T035531Z-001/ALL FILE/pdf/applied.pdf')">
+              <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\dis.jpg" alt="Book 2" class="book-image">
+            </a>
+            <div class="book-description">
+              <h2>Applied Discrete Structures by Kenneth Levasseur</h2>
+              <p>A practical guide to applied discrete mathematics.</p>
+            </div>
+          </div>
+          
+          <div class="book" id="book3">
+            <a href="#" onclick="openBook('D:/ALL FILE-20240524T035531Z-001/ALL FILE/pdf/MathinSociety.pdf')">
+              <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\math.jpg" alt="Book 3" class="book-image">
+            </a>
+            <div class="book-description">
+              <h2>Math in Society - Edition 2.5 by David Lippman</h2>
+              <p>A textbook focusing on mathematical concepts relevant to everyday life.</p>
+            </div>
+          </div>
+          
+        </div>
+        <button class="prev" onclick="prevBook()">❮</button>
+        <button class="next" onclick="nextBook()">❯</button>
+      </div>
+    </div>
+  </main>
+  <div id="logoContainer">
+    <a href="EbookMenu.html" class="logo"><img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\CCS.png" alt="Logo 1"></a>
+    <a href="cba.html" class="logo"><img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\CBA.png" alt="Logo 2"></a>
+    <a href="bsn.html" class="logo"><img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\bsn.png" alt="Logo 3"></a>
+    <a href="CEAS.html" class="logo"><img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\CEAS.png" alt="Logo 4"></a>
+  </div>
+  <footer>
+    <!-- Footer content goes here -->
+  </footer>
+
+  <div id="pdfOverlay">
+    <div class="overlayNav">
+      <button onclick="closeBook()">X</button>
+    </div>
+    <iframe id="pdfViewer" style="width: 100%; height: 100%; border: none;"></iframe>
+  </div>
+
+  <script src="EbookMenu.js"></script>
+  <script>
+    function openBook(pdfFile) {
+      var pdfViewer = document.getElementById('pdfViewer');
+      var pdfOverlay = document.getElementById('pdfOverlay');
+      pdfViewer.src = pdfFile;
+      pdfOverlay.style.display = 'flex';
+    }
+
+    function closeBook() {
+      var pdfOverlay = document.getElementById('pdfOverlay');
+      pdfOverlay.style.display = 'none';
+    }
+  </script>
+</body>
+</html>

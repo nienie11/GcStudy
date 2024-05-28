@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  background-image: url('D:/ALL FILE-20240524T035531Z-001/ALL FILE/img/gcstudyb.jpg'); 
+  overflow-x: hidden; 
+  font-family: roboto; 
+  -webkit-font-smoothing: antialiased; 
+  margin: 0;
+  min-height: 100vh; /* Make the body at least as tall as the viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+   display: -webkit-flex; 
+   display: flex; 
+   -webkit-flex-direction: row;  
+   flex-direction: row; 
+   -webkit-justify-content: flex-start; 
+   justify-content: flex-start;
+  }
+
+.nav {
+  position: fixed; 
+  background-color: #1A4D2E;
+  top: 0;
+  width: 100%; 
+  z-index: 1000; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container img {
+  margin: 7px 0px 2px 20px;
+  transition: transform 0.3s ease;
+}
+
+
+.logo-container img:hover{
+  transform: scale(1.1);
+}
+
+.nav p{
+margin-left: 240px;
+color: white;
+font-size: 30px;
+transition: transform 0.3s ease;
+}
+
+.nav p:hover {
+transform: scale(1.1);
+}
+
+.nav ul {
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;;
+  padding: 15px;
+  text-align: right;
+  
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 17px;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 15px;
+ 
+}
+
+
+.nav li:hover {
+  transform: scale(1.1);
+}
+
+.burger-menu {
+  position: absolute;
+  top: 15%;
+  left: 1%;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.burger-menu .bar {
+  display: block;
+  width: 40px;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+.burger-menu.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger-menu.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+}
+
+.vertical-nav {
+  position: fixed;
+  top: 10%;
+  left: 0; /* hide the vertical nav by default */
+  width: 200px;
+  height: 100%;
+  background-color: #1A4D2E;
+  padding: 20px;
+  padding-top:50px;
+  box-sizing: border-box;
+  display: none;
+  transform: translateX(-100%);
+  transition: opacity 0.3s left 0.3s ease-in-out;
+  z-index: 98;
+}
+
+.vertical-nav.open {
+  display: block;
+  transform: translateX(0);
+}
+
+.vertical-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 20%;
+}
+
+.vertical-nav li {
+  margin: 0 5px 5px 0;
+  width: auto;
+  border-bottom: 2px solid white;
+}
+
+.vertical-nav a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.vertical-nav a:hover {
+  color: #0A8ACB;
+}
+
+.vertical-nav:hover{
+  opacity: 1;
+}
+
+
+.navbar {
+  width: 100%;
+  padding: 1rem;
+}
+
+.nav-menu {
+  display: none;
+}
+
+
+
+.head h1{
+  position: absolute;
+  top: 100px;
+  right: 35%;
+  color: #fff;
+  text-shadow: 4px 1px 5px rgba(0, 0, 0, 0.56);
+}
+.slider {
+  text-shadow: 4px 1px 5px rgba(0, 0, 0, 0.56);
+}
+
+.slider-wrapper div {
+  position: relative;
+}
+
+.slider-wrapper {
+  margin-top: 15vw; 
+  margin-left: 11vw;
+}
+
+img{
+  max-width: 24vw;
+  max-height: 24vw;
+}
+.slide-image {
+  height: 24vw;
+}
+
+.slide-image img {
+  width: 24vw; 
+}
+
+.slide-content {
+  width: 25vw; color: #fff; 
+  padding:0vw 18vw 3vw 9vw;
+}
+
+
+.slide-title {
+  font-size: 1vw; 
+  font-weight: 400; 
+  letter-spacing: 0.1vw; 
+  line-height: 1.55vw; 
+  padding-bottom: 20px;
+}
+
+.slide-bullet {
+  width: 0.5vw; 
+  height: 0.5vw; 
+  background-color: #0b8bcc; 
+  border-radius: 200%; 
+  position: relative; 
+  margin-left: 1.2vw;
+}
+
+.slide-nav {
+  margin-left: 64vw; 
+  margin-top: -5.5vw;
+}
+
+
+.arrows{
+  width: 3.5vw; 
+  margin-top: -5.8vw; 
+  margin-left: 72vw; 
+  position: relative;
+}
+
+.arrow {
+  display: inline-block; 
+  position: absolute; 
+  width: 1.2vw; 
+  height: 1.2vw; 
+  background: transparent;
+  text-indent: -9999px; 
+  border-top: 0.15vw solid #fff; 
+  border-left: 0.15vw solid #fff;
+  transition: all .1s ease-in-out; 
+  text-decoration: none; 
+  color: transparent;
+}
+
+.arrow:hover {
+  border-color: #0A8ACB; 
+  border-width: 0.25vw;
+}
+
+.arrow:before {
+  display: block; 
+  height: 200%; 
+  width: 200%; 
+  margin-left: -50%;
+  margin-top: -50%; 
+  content: ""; 
+  transform: rotate(45deg);
+}
+
+.arrow.prev {
+  transform: rotate(-45deg); 
+  left: 0;
+}
+
+.arrow.next {
+  transform: rotate(135deg); 
+  right: 0;
+}
+
+.footer-item {
+  display: inline-block;
+  margin-right: 10px;
+}

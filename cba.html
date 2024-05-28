@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Logos</title>
+  <link rel="stylesheet" href="EbookMenu.css">
+</head>
+<body>
+  <div class="nav">
+    <div class="logo-container">
+      <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\GCLogo.png" height="auto" width="70px" alt="Logo of Gordon College"> 
+    </div>
+    <p>EBOOKS</p>
+    <ul class="navlinks">
+      <li><a href="main.html">Home</a></li>
+      <li><a href="Webinar.html">Webinar</a></li>
+      <li><a href="EbookMenu.html">Ebooks</a></li>
+    </ul>
+  </div>
+  <main>
+    <!-- Main content goes here -->
+    <div class="left-logo-container">
+      <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\CBA.png" alt="Large Logo" class="large-logo">
+      <div class="rectangle-container">
+        <div class="book-slider">
+          <div class="book" id="book1">
+            <a href="#" onclick="openBook('D:/ALL FILE-20240524T035531Z-001/ALL FILE/pdf/Introduction-to-Psychology.pdf')">
+              <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\ITPbycharles.jpg" alt="Book 1" class="book-image">
+            </a>
+            <div class="book-description">
+              <h2>Introduction to Psychology by Charles Stangor</h2>
+              <p>An introductory book covering basic concepts and theories in psychology.</p>
+            </div>
+          </div>
+          
+          <div class="book" id="book2">
+            <a href="#" onclick="openBook('D:/ALL FILE-20240524T035531Z-001/ALL FILE/pdf/Sociology.pdf')">
+              <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\sociology.jpg" alt="Book 2" class="book-image">
+            </a>
+            <div class="book-description">
+              <h2>Sociology: Understanding and Changing the Social World by Steven Barkan</h2>
+              <p>A comprehensive sociology textbook exploring social structures and dynamics.</p>
+            </div>
+          </div>
+          
+          <div class="book" id="book3">
+            <a href="#" onclick="openBook('D:/ALL FILE-20240524T035531Z-001/ALL FILE/pdf/Principles-of-Economics.pdf')">
+              <img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\Economics.jpg" alt="Book 3" class="book-image">
+            </a>
+            <div class="book-description">
+              <h2>Principles of Economics by Timothy Taylor and Steven A. Greenlow</h2>
+              <p>An essential economics textbook covering foundational principles.</p>
+            </div>
+          </div>
+        </div>
+        <button class="prev" onclick="prevBook()">❮</button>
+        <button class="next" onclick="nextBook()">❯</button>
+      </div>
+    </div>
+  </main>
+  <div id="logoContainer">
+    <a href="EbookMenu.html" class="logo"><img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\CCS.png" alt="Logo 1"></a>
+    <a href="cba.html" class="logo"><img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\CBA.png" alt="Logo 2"></a>
+    <a href="bsn.html" class="logo"><img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\bsn.png" alt="Logo 3"></a>
+    <a href="CEAS.html" class="logo"><img src="D:\ALL FILE-20240524T035531Z-001\ALL FILE\img\CEAS.png" alt="Logo 4"></a>
+  </div>
+  <footer>
+    <!-- Footer content goes here -->
+  </footer>
+
+  <div id="pdfOverlay">
+    <div class="overlayNav">
+      <button onclick="closeBook()">X</button>
+    </div>
+    <iframe id="pdfViewer" style="width: 100%; height: 100%; border: none;"></iframe>
+  </div>
+
+  <script src="EbookMenu.js"></script>
+  <script>
+    function openBook(pdfFile) {
+      var pdfViewer = document.getElementById('pdfViewer');
+      var pdfOverlay = document.getElementById('pdfOverlay');
+      pdfViewer.src = pdfFile;
+      pdfOverlay.style.display = 'flex';
+    }
+
+    function closeBook() {
+      var pdfOverlay = document.getElementById('pdfOverlay');
+      pdfOverlay.style.display = 'none';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  
+}
+
+body {
+  background-image: url('D:/ALL FILE-20240524T035531Z-001/ALL FILE/img/gcstudyb.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden; 
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #EBF4FD;
+  font-family: 'Trebuchet MS', sans-serif;
+  padding: 15px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px; 
+}
+
+.navdiv {
+  margin-left: auto;
+}
+
+.navdiv ul {
+  display: flex;
+  list-style: none;
+  padding: 0; 
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white; 
+  padding: 10px 20px; 
+  border-radius: 5px;
+  transition: background-color 0.3s ease; 
+}
+
+li {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 1.3em;
+  text-shadow: 4px 1px 5px rgba(0, 0, 0, 0.56);
+  transition: transform 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.1);
+}
+
+li a {
+  color: white;
+}
+
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 15px;
+  font-family: 'Trebuchet MS', sans-serif;
+  overflow: hidden;
+}
+
+.paragraphGCS {
+  flex: 1;
+  text-align: justify; 
+  padding-right: 20px; 
+  margin-top: 110px; 
+  margin-left: 20px; 
+  font-family: 'Trebuchet MS', sans-serif; 
+  font-size: 21px;
+  color: white; 
+}
+
+.triangle-button {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid rgb(228, 255, 109);
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.triangle-button:hover {
+  transform: translateX(10px); 
+}
+
+.paragraphGCS p.title {
+  font-size: 42px; 
+  font-weight: bold; 
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 200px;
+}
+
+.logoGCS img{
+  position: relative;
+  bottom: 75px;
+}
